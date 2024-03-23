@@ -19,7 +19,7 @@ public class DataStructuresHandler
         Graph
     }
 
-    int powerOfTen = 2;  // From 1 to 5
+    int powerOfTen = 5;  // From 1 to 5
     string dict = "";
 
     IStructure GetStructureType(StructureType structureType)
@@ -55,16 +55,16 @@ public class DataStructuresHandler
     {
         int size = (int)MathF.Pow(10, powerOfTen);
 
-        // foreach (var i in Enum.GetValues(typeof(StructureType)))
-        // {
-        //     IStructure structure = GetStructureType((StructureType)i);
-        //     TestCase(structure, size);
+        foreach (var i in Enum.GetValues(typeof(StructureType)))
+        {
+            IStructure structure = GetStructureType((StructureType)i);
+            TestCase(structure, size);
 
-        //     Thread.Sleep(1000);
-        // }
+            Thread.Sleep(1000);
+        }
 
-        IStructure structure = GetStructureType(StructureType.Graph);
-        TestCase(structure, size);
+        // IStructure structure = GetStructureType(StructureType.Graph);
+        // TestCase(structure, size);
 
         Console.WriteLine(dict);
     }
@@ -80,24 +80,20 @@ public class DataStructuresHandler
         timeDiag.Start();
 
         structure.Create(size);
-        structure.Read();
+        // structure.Read();
 
         bool x = structure.Search("19");
         Console.WriteLine($"Search for 19: {x}");
 
         structure.Update("7", "XYZ");
-        structure.Read();
-        structure.UpdateAt(12, "Hello");
-        structure.Read();
+        structure.UpdateAt(1222, "Hello");
 
         structure.Delete("31");
-        structure.Read();
-        structure.DeleteAt(19);
-        structure.Read();
+        structure.DeleteAt(1999);
 
-        structure.InsertAt(22, "------------------");
+        structure.InsertAt(2222, "------------------");
 
-        structure.Read();
+        // structure.Read();
 
         memoDiag.End();
         timeDiag.End();

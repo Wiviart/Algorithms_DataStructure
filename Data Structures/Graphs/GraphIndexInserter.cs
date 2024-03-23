@@ -10,7 +10,7 @@ public class GraphIndexInserter : IIndexInsertable<string, Graph>
             return;
         }
 
+        graph.InsertVertex(index, value);
         Console.WriteLine("Inserted vertex: " + value + " at index: " + index);
-        graph.InsertVertices(index, value);
     }
 }

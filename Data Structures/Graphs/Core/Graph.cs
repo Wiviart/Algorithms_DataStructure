@@ -1,5 +1,3 @@
-
-
 public class Graph
 {
     List<Vertex> vertices = new List<Vertex>();
@@ -73,7 +71,7 @@ public class Graph
         }
     }
 
-    internal void InsertVertices(int index, string value)
+    internal void InsertVertex(int index, string value)
     {
         List<Vertex> newVertices = new List<Vertex>();
 
