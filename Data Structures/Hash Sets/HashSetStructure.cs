@@ -20,7 +20,15 @@ public class HashSetStructure : IStructure
 
     public void DeleteAt(int v)
     {
-        Console.WriteLine("Can not implemented the delete with index in HashSet");
+        if (v < 0 || v >= hashSet.Count)
+        {
+            Console.WriteLine("Index out of range");
+            return;
+        }
+        
+        var i = hashSet.ElementAt(v);
+        Delete(i);
+        // Console.WriteLine("Can not implemented the delete with index in HashSet");
     }
 
     public void InsertAt(int v, string v2)
@@ -48,7 +56,9 @@ public class HashSetStructure : IStructure
 
     public void UpdateAt(int v1, string v2)
     {
-        Console.WriteLine("Can not implemented the update with index in HashSet");
+        var i = hashSet.ElementAt(v1);
+        Update(i, v2);
+        // Console.WriteLine("Can not implemented the update with index in HashSet");
     }
 
     public bool Search(string v)

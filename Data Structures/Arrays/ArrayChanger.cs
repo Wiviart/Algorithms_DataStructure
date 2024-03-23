@@ -1,6 +1,6 @@
-public class ArrayChanger : IChangable<string[]>
+public class ArrayChanger : IUpdatable<string[]>
 {
-    public void Change(string oldValue, string newValue, string[]? array = default)
+    public void Update(string oldValue, string newValue, string[]? array = default)
     {
         if (array == null)
         {

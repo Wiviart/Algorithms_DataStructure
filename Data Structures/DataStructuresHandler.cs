@@ -16,9 +16,10 @@ public class DataStructuresHandler
         Stack,
         BreadthTree,
         DepthTree,
+        Graph
     }
 
-    int powerOfTen = 5;  // From 1 to 5
+    int powerOfTen = 2;  // From 1 to 5
     string dict = "";
 
     IStructure GetStructureType(StructureType structureType)
@@ -43,6 +44,8 @@ public class DataStructuresHandler
                 return new BreadthTreeStructure();
             case StructureType.DepthTree:
                 return new DepthTreeStructure();
+            case StructureType.Graph:
+                return new GraphStructure();
             default:
                 return new ArrayStructure();
         }
@@ -60,7 +63,7 @@ public class DataStructuresHandler
         //     Thread.Sleep(1000);
         // }
 
-        IStructure structure = GetStructureType(StructureType.BreadthTree);
+        IStructure structure = GetStructureType(StructureType.Graph);
         TestCase(structure, size);
 
         Console.WriteLine(dict);
@@ -68,7 +71,7 @@ public class DataStructuresHandler
 
     void TestCase(IStructure structure, int size)
     {
-        Console.WriteLine($"Testing {structure.GetType().Name} with {size} elements");
+        Console.WriteLine($"Testing {structure.GetType().Name} with prime numbers in range 10^{size}");
 
         IDiagnostic memoDiag = new MemoryDiagnostic();
         IDiagnostic timeDiag = new TimeDiagnostic();
@@ -79,16 +82,20 @@ public class DataStructuresHandler
         structure.Create(size);
         structure.Read();
 
-        bool x = structure.Search("15299");
-        Console.WriteLine($"Search for 15299: {x}");
+        bool x = structure.Search("19");
+        Console.WriteLine($"Search for 19: {x}");
 
-        structure.Update("2657", "XYZ");
-        structure.UpdateAt(1000, "Hello");
+        structure.Update("7", "XYZ");
+        structure.Read();
+        structure.UpdateAt(12, "Hello");
+        structure.Read();
 
-        structure.Delete("2833");
-        structure.DeleteAt(1000);
+        structure.Delete("31");
+        structure.Read();
+        structure.DeleteAt(19);
+        structure.Read();
 
-        structure.InsertAt(1333, "------------------");
+        structure.InsertAt(22, "------------------");
 
         structure.Read();
 

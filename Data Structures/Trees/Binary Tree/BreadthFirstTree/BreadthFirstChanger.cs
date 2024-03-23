@@ -1,6 +1,6 @@
-public class BreadthFirstChanger : IChangable<Node>
+public class BreadthFirstChanger : IUpdatable<Node>
 {
-    public void Change(string oldValue, string newValue, Node? root = default)
+    public void Update(string oldValue, string newValue, Node? root = default)
     {
         if (root == null) return;
 

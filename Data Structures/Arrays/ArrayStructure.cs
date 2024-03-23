@@ -49,7 +49,7 @@ public class ArrayStructure : IStructure
     public void Update(string v1, string v2)
     {
         ArrayChanger changer = new ArrayChanger();
-        changer.Change(v1, v2, array);
+        changer.Update(v1, v2, array);
     }
 
     public void UpdateAt(int i, string value)

@@ -42,8 +42,8 @@ public class BreadthTreeStructure : IStructure
 
     public void Update(string v1, string v2)
     {
-        IChangable<Node> updater = new BreadthFirstChanger();
-        updater.Change(v1, v2, root);
+        IUpdatable<Node> updater = new BreadthFirstChanger();
+        updater.Update(v1, v2, root);
     }
 
     public void UpdateAt(int v1, string v2)
