@@ -4,23 +4,19 @@ using System.Diagnostics;
 
 public class TimeDiagnostic : IDiagnostic
 {
-    readonly Stopwatch sw = new Stopwatch();
-    long result;
+    static readonly Stopwatch sw = new Stopwatch();
+    static long result;
+    public static string Result => result.ToString("0,000");
 
-    public void Start()
+    public static void Start()
     {
         sw.Start();
     }
 
-    public void End()
+    public static void End()
     {
         sw.Stop();
         result = sw.ElapsedMilliseconds;
-        Console.WriteLine("Time: " + sw.ElapsedMilliseconds.ToString("0,000") + "ms");
-    }
-
-    public string GetResult()
-    {
-        return result.ToString("0,000");
+        Console.WriteLine("Time: " + Result + "ms");
     }
 }

@@ -1,6 +1,5 @@
 public interface IDiagnostic
 {
-    void Start();
-    void End();
-    string GetResult();
+    static void Start() { }
+    static void End() { }
 }

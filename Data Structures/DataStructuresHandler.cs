@@ -73,11 +73,8 @@ public class DataStructuresHandler
     {
         Console.WriteLine($"Testing {structure.GetType().Name} with prime numbers in range 10^{size}");
 
-        IDiagnostic memoDiag = new MemoryDiagnostic();
-        IDiagnostic timeDiag = new TimeDiagnostic();
-
-        memoDiag.Start();
-        timeDiag.Start();
+        MemoryDiagnostic.Start();
+        TimeDiagnostic.Start();
 
         structure.Create(size);
         // structure.Read();
@@ -95,9 +92,9 @@ public class DataStructuresHandler
 
         // structure.Read();
 
-        memoDiag.End();
-        timeDiag.End();
+        MemoryDiagnostic.End();
+        TimeDiagnostic.End();
 
-        dict += structure.GetType().Name + " : " + memoDiag.GetResult() + " bytes " + timeDiag.GetResult() + " ms\n";
+        dict += structure.GetType().Name + " : " + MemoryDiagnostic.Result + " bytes " + TimeDiagnostic.Result + " ms\n";
     }
 }
