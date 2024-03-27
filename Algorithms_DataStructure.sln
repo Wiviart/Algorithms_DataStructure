@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Structures", "Data Structures\Data Structures.csproj", "{6105C38C-30E3-4359-8EE2-6AC691E7E18A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithms", "Algorithms", "{64FBBF91-37AC-4BC3-AF8B-9F43B3C95141}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sort", "Algorithms\Sort\Sort.csproj", "{FA047022-A658-44D4-B818-A4735DC49280}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,5 +26,12 @@ Global
 		{6105C38C-30E3-4359-8EE2-6AC691E7E18A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6105C38C-30E3-4359-8EE2-6AC691E7E18A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6105C38C-30E3-4359-8EE2-6AC691E7E18A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA047022-A658-44D4-B818-A4735DC49280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA047022-A658-44D4-B818-A4735DC49280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA047022-A658-44D4-B818-A4735DC49280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA047022-A658-44D4-B818-A4735DC49280}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FA047022-A658-44D4-B818-A4735DC49280} = {64FBBF91-37AC-4BC3-AF8B-9F43B3C95141}
 	EndGlobalSection
 EndGlobal
