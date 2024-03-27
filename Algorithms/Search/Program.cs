@@ -2,6 +2,12 @@
 int target = 15;
 
 ISearch search = new BinarySearch();
+
+IDiagnostic memoryDiag = new MemoryDiagnostic();
+IDiagnostic timeDiag = new TimeDiagnostic();
+memoryDiag.Start();
+timeDiag.Start();
+
 int i = search.Search(array, target);
 
 switch (i)
@@ -13,3 +19,6 @@ switch (i)
         Console.WriteLine($"Element {target} found at index: " + i);
         break;
 }
+
+timeDiag.End();
+memoryDiag.End();
