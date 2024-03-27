@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithms", "Algorithms", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sort", "Algorithms\Sort\Sort.csproj", "{FA047022-A658-44D4-B818-A4735DC49280}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search", "Algorithms\Search\Search.csproj", "{525BE0EF-B01E-4A2C-856D-C2AE869484DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,8 +32,13 @@ Global
 		{FA047022-A658-44D4-B818-A4735DC49280}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA047022-A658-44D4-B818-A4735DC49280}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA047022-A658-44D4-B818-A4735DC49280}.Release|Any CPU.Build.0 = Release|Any CPU
+		{525BE0EF-B01E-4A2C-856D-C2AE869484DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{525BE0EF-B01E-4A2C-856D-C2AE869484DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{525BE0EF-B01E-4A2C-856D-C2AE869484DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{525BE0EF-B01E-4A2C-856D-C2AE869484DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FA047022-A658-44D4-B818-A4735DC49280} = {64FBBF91-37AC-4BC3-AF8B-9F43B3C95141}
+		{525BE0EF-B01E-4A2C-856D-C2AE869484DA} = {64FBBF91-37AC-4BC3-AF8B-9F43B3C95141}
 	EndGlobalSection
 EndGlobal
